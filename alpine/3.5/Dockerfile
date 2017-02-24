@@ -1,5 +1,5 @@
 # Alpine Linux 3.5 for ARMv7
-# Copyright (C) 2017 Rodrigo Martínez <dev@brunneis.com>
+# Copyright (C) 2017 Rodrigo Martínez <rodrigo@gradox.red>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -13,7 +13,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 FROM scratch
-MAINTAINER "Rodrigo Martínez" <dev@brunneis.com>
+MAINTAINER "Rodrigo Martínez" <rodrigo@gradox.red>
 
 ################################################
 # ALPINE LINUX 3.5
