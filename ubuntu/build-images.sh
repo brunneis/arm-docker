@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# Ubuntu Docker image generator for ARM architectures
+# Copyright (C) 2017 Rodrigo Martínez <dev@brunneis.com>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 DOCKER_USER=brunneis
 ARCHS=(armhf arm64)
 UBUNTU_VERSIONS=(14.04.5 16.04.3 17.04)
@@ -40,7 +54,7 @@ function generate_dockerfile () {
 # (at your option) any later version.
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU General Public License for more details.
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
@@ -54,10 +68,10 @@ MAINTAINER "Rodrigo Martínez" <dev@brunneis.com>
 
 ADD ubuntu-$1-$2.tar.gz /
 
-RUN \
-    TERM=xterm \
-    && apt-get update \
-    && apt-get -y upgrade \
+RUN \\
+    TERM=xterm \\
+    && apt-get update \\
+    && apt-get -y upgrade \\
     && apt-get clean
 
 CMD ["/bin/bash"]
